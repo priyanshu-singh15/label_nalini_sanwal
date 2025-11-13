@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "home page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "navbar": {
+      "type": "component",
+      "component": "layout.nav-item",
+      "repeatable": true
+    },
+    "logo": {
+      "type": "component",
+      "component": "layout.logo",
+      "repeatable": false
+    },
+    "carousel": {
+      "type": "component",
+      "component": "shared.media-with-link",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,19 @@
+#ignoring client resources
+
+client/node_modules
+client/.next
+client/.env.local
+
+#ignoring server resources
+backend/node_modules
+backend/public/uploads/*
+backent/.env.example
+
+backend/.env
+backend/license.txt
+backend/exports
+backend/.strapi
+backend/dist
+backend/build
+backend/.strapi-updater.json
+backend/.strapi-cloud.json
