@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "home_pages",
   "info": {
     "singularName": "home-page",
@@ -13,18 +13,8 @@
   "attributes": {
     "navbar": {
       "type": "component",
-      "component": "layout.nav-item",
-      "repeatable": true
-    },
-    "logo": {
-      "type": "component",
-      "component": "layout.logo",
+      "component": "layout.nav-bar",
       "repeatable": false
-    },
-    "carousel": {
-      "type": "component",
-      "component": "shared.media-with-link",
-      "repeatable": true
     }
   }
 }

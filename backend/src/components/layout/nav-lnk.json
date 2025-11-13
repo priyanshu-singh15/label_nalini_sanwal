@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_nav_lnks",
+  "info": {
+    "displayName": "nav-lnk"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string",
+      "default": "/"
+    }
+  },
+  "config": {}
+}

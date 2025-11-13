@@ -12,10 +12,41 @@ export interface LayoutLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutNavBar extends Struct.ComponentSchema {
+  collectionName: 'components_layout_nav_bars';
+  info: {
+    displayName: 'nav-bar';
+  };
+  attributes: {
+    navLinks: Schema.Attribute.Component<'layout.nav-links', false>;
+  };
+}
+
 export interface LayoutNavItem extends Struct.ComponentSchema {
   collectionName: 'components_layout_nav_items';
   info: {
     displayName: 'nav_item';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    path: Schema.Attribute.String & Schema.Attribute.DefaultTo<'/'>;
+  };
+}
+
+export interface LayoutNavLinks extends Struct.ComponentSchema {
+  collectionName: 'components_layout_nav_links';
+  info: {
+    displayName: 'nav-links';
+  };
+  attributes: {
+    navLink: Schema.Attribute.Component<'layout.nav-lnk', true>;
+  };
+}
+
+export interface LayoutNavLnk extends Struct.ComponentSchema {
+  collectionName: 'components_layout_nav_lnks';
+  info: {
+    displayName: 'nav-lnk';
   };
   attributes: {
     label: Schema.Attribute.String;
@@ -100,7 +131,10 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'layout.logo': LayoutLogo;
+      'layout.nav-bar': LayoutNavBar;
       'layout.nav-item': LayoutNavItem;
+      'layout.nav-links': LayoutNavLinks;
+      'layout.nav-lnk': LayoutNavLnk;
       'shared.media': SharedMedia;
       'shared.media-with-link': SharedMediaWithLink;
       'shared.quote': SharedQuote;
