@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_carousel_items",
+  "info": {
+    "displayName": "carousel_items"
+  },
+  "options": {},
+  "attributes": {
+    "carousel_item": {
+      "type": "component",
+      "component": "shared.media-with-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

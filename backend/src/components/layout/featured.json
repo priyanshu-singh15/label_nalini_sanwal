@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_featureds",
+  "info": {
+    "displayName": "featured"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "featured_item": {
+      "type": "component",
+      "component": "shared.media-with-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

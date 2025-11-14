@@ -1,5 +1,55 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface LayoutCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_layout_carousels';
+  info: {
+    displayName: 'carousel';
+  };
+  attributes: {
+    carousel_list: Schema.Attribute.Component<'layout.carousel-items', false>;
+  };
+}
+
+export interface LayoutCarouselItems extends Struct.ComponentSchema {
+  collectionName: 'components_layout_carousel_items';
+  info: {
+    displayName: 'carousel_items';
+  };
+  attributes: {
+    carousel_item: Schema.Attribute.Component<'shared.media-with-link', true>;
+  };
+}
+
+export interface LayoutCategory extends Struct.ComponentSchema {
+  collectionName: 'components_layout_categories';
+  info: {
+    displayName: 'category';
+  };
+  attributes: {
+    category_item: Schema.Attribute.Component<'shared.media-with-link', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFeatured extends Struct.ComponentSchema {
+  collectionName: 'components_layout_featureds';
+  info: {
+    displayName: 'featured';
+  };
+  attributes: {
+    featured_item: Schema.Attribute.Component<'shared.media-with-link', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooter extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footers';
+  info: {
+    displayName: 'footer';
+  };
+  attributes: {};
+}
+
 export interface LayoutLogo extends Struct.ComponentSchema {
   collectionName: 'components_layout_logos';
   info: {
@@ -72,6 +122,7 @@ export interface SharedMediaWithLink extends Struct.ComponentSchema {
   };
   attributes: {
     img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    label: Schema.Attribute.String;
     path: Schema.Attribute.String & Schema.Attribute.DefaultTo<'/'>;
   };
 }
@@ -130,6 +181,11 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'layout.carousel': LayoutCarousel;
+      'layout.carousel-items': LayoutCarouselItems;
+      'layout.category': LayoutCategory;
+      'layout.featured': LayoutFeatured;
+      'layout.footer': LayoutFooter;
       'layout.logo': LayoutLogo;
       'layout.nav-bar': LayoutNavBar;
       'layout.nav-item': LayoutNavItem;

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_carousels",
+  "info": {
+    "displayName": "carousel"
+  },
+  "options": {},
+  "attributes": {
+    "carousel_list": {
+      "type": "component",
+      "component": "layout.carousel-items",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
