@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_site_links",
+  "info": {
+    "displayName": "Site Links"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "site_link"
+    },
+    "path": {
+      "type": "string",
+      "default": "/"
+    }
+  },
+  "config": {}
+}

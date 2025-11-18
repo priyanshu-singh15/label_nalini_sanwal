@@ -4,6 +4,27 @@
     "displayName": "footer"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "site_links": {
+      "type": "component",
+      "component": "layout.site-links",
+      "repeatable": true
+    },
+    "quick_links": {
+      "type": "component",
+      "component": "layout.quick-links",
+      "repeatable": false
+    },
+    "follow_us": {
+      "type": "component",
+      "component": "layout.follow-us",
+      "repeatable": false
+    },
+    "visit_us": {
+      "type": "component",
+      "component": "layout.visit-us",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

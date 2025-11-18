@@ -42,12 +42,25 @@ export interface LayoutFeatured extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutFollowUs extends Struct.ComponentSchema {
+  collectionName: 'components_layout_follow_uses';
+  info: {
+    displayName: 'Follow Us';
+  };
+  attributes: {};
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
     displayName: 'footer';
   };
-  attributes: {};
+  attributes: {
+    follow_us: Schema.Attribute.Component<'layout.follow-us', false>;
+    quick_links: Schema.Attribute.Component<'layout.quick-links', false>;
+    site_links: Schema.Attribute.Component<'layout.site-links', true>;
+    visit_us: Schema.Attribute.Component<'layout.visit-us', false>;
+  };
 }
 
 export interface LayoutLogo extends Struct.ComponentSchema {
@@ -102,6 +115,33 @@ export interface LayoutNavLnk extends Struct.ComponentSchema {
     label: Schema.Attribute.String;
     path: Schema.Attribute.String & Schema.Attribute.DefaultTo<'/'>;
   };
+}
+
+export interface LayoutQuickLinks extends Struct.ComponentSchema {
+  collectionName: 'components_layout_quick_links';
+  info: {
+    displayName: 'Quick Links';
+  };
+  attributes: {};
+}
+
+export interface LayoutSiteLinks extends Struct.ComponentSchema {
+  collectionName: 'components_layout_site_links';
+  info: {
+    displayName: 'Site Links';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'site_link'>;
+    path: Schema.Attribute.String & Schema.Attribute.DefaultTo<'/'>;
+  };
+}
+
+export interface LayoutVisitUs extends Struct.ComponentSchema {
+  collectionName: 'components_layout_visit_uses';
+  info: {
+    displayName: 'Visit Us';
+  };
+  attributes: {};
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {
@@ -185,12 +225,16 @@ declare module '@strapi/strapi' {
       'layout.carousel-items': LayoutCarouselItems;
       'layout.category': LayoutCategory;
       'layout.featured': LayoutFeatured;
+      'layout.follow-us': LayoutFollowUs;
       'layout.footer': LayoutFooter;
       'layout.logo': LayoutLogo;
       'layout.nav-bar': LayoutNavBar;
       'layout.nav-item': LayoutNavItem;
       'layout.nav-links': LayoutNavLinks;
       'layout.nav-lnk': LayoutNavLnk;
+      'layout.quick-links': LayoutQuickLinks;
+      'layout.site-links': LayoutSiteLinks;
+      'layout.visit-us': LayoutVisitUs;
       'shared.media': SharedMedia;
       'shared.media-with-link': SharedMediaWithLink;
       'shared.quote': SharedQuote;
