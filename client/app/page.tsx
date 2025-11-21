@@ -3,9 +3,9 @@ import LogoComponent from "@/components/home-page/block-logo/logo";
 import Image from "next/image";
 import Link from "next/link";
 
-export const API_URL = "http://localhost:1337";
-const API_TOKEN =
-  "f5a59c478644b5c3c38529096624b5c98536b2e890e7d8c83bd60e24cf2eb33aa6af3408b405277d2537a0ecfb4ce76dbfc0afafad099995eb62b0f29a4393cd40e711d3206409c63671b54c72f65835f4c4049e31f53ca4beb0d708ea41715db71fbc035c0ecc4051e460ae3278a25cfa5d5200db1a17f2adae61cd7e75e57f";
+export const API_URL = process.env.STRAPI_API_BASE_URL;
+
+const API_TOKEN = process.env.STRAPI_API_KEY;
 
 async function getHomePageData() {
   const url = new URL(`${API_URL}/api/home-page`);
