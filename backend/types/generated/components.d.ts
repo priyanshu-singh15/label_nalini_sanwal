@@ -47,7 +47,10 @@ export interface LayoutFollowUs extends Struct.ComponentSchema {
   info: {
     displayName: 'Follow Us';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+  };
 }
 
 export interface LayoutFooter extends Struct.ComponentSchema {
@@ -56,8 +59,8 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     displayName: 'footer';
   };
   attributes: {
-    follow_us: Schema.Attribute.Component<'layout.follow-us', false>;
-    quick_links: Schema.Attribute.Component<'layout.quick-links', false>;
+    follow_us: Schema.Attribute.Component<'layout.follow-us', true>;
+    quick_links: Schema.Attribute.Component<'layout.quick-links', true>;
     site_links: Schema.Attribute.Component<'layout.site-links', true>;
     visit_us: Schema.Attribute.Component<'layout.visit-us', false>;
   };
@@ -122,7 +125,10 @@ export interface LayoutQuickLinks extends Struct.ComponentSchema {
   info: {
     displayName: 'Quick Links';
   };
-  attributes: {};
+  attributes: {
+    label: Schema.Attribute.String;
+    path: Schema.Attribute.String;
+  };
 }
 
 export interface LayoutSiteLinks extends Struct.ComponentSchema {
@@ -141,7 +147,9 @@ export interface LayoutVisitUs extends Struct.ComponentSchema {
   info: {
     displayName: 'Visit Us';
   };
-  attributes: {};
+  attributes: {
+    address: Schema.Attribute.Text;
+  };
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {

@@ -4,6 +4,13 @@
     "displayName": "Follow Us"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

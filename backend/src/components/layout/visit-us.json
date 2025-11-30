@@ -4,6 +4,10 @@
     "displayName": "Visit Us"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "address": {
+      "type": "text"
+    }
+  },
   "config": {}
 }

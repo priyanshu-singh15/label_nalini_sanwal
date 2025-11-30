@@ -4,6 +4,13 @@
     "displayName": "Quick Links"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

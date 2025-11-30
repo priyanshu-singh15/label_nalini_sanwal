@@ -13,12 +13,12 @@
     "quick_links": {
       "type": "component",
       "component": "layout.quick-links",
-      "repeatable": false
+      "repeatable": true
     },
     "follow_us": {
       "type": "component",
       "component": "layout.follow-us",
-      "repeatable": false
+      "repeatable": true
     },
     "visit_us": {
       "type": "component",
